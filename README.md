@@ -15,21 +15,20 @@ The Azure Terraform provider requires a `client_id`, `client_secret`, `tenant_id
 
 # Preparing to deploy
 
-Create an environment variable file (eg: .envrc) with the following content :
+Create a terraform variable file (eg: poc.tfvars) with the following content :
 
 ```
-export ARM_CLIENT_ID="YOUR-CLIENT-ID"
-export ARM_CLIENT_SECRET="YOUR-CLIENT-SECRET"
-export ARM_SUBSCRIPTION_ID="YOUR-SUBSCRIPTION-ID"
-export ARM_TENANT_ID="YOUR-TENANT-ID"
+subscription_id = "YOUR-SUBSCRIPTION-ID"
+client_id       = "YOUR-AZURE-APP-ID"
+client_secret   = "YOUR-AZURE-APP-PASSWORD"
+tenant_id       = "YOUR-AZURE-TENANT"
 ```
 
 # Deploying with Terraform
 
 ```
-$ source .envrc
 $ terraform init
-$ terraform apply
+$ terraform apply -var-file="poc.tfvars"
 ```
 
 # Connecting to the Jumpbox (NAT server)
