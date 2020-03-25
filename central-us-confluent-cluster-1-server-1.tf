@@ -39,7 +39,7 @@ resource "azurerm_virtual_machine" "us-kafka-server-1" {
   }
   os_profile {
     computer_name  = "kafka-server-1"
-    admin_username = "daniellavoie"
+    admin_username = "kafka"
     admin_password = "Password1234!"
   }
   os_profile_linux_config {

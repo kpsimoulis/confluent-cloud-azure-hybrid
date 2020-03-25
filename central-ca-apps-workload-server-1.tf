@@ -37,7 +37,7 @@ resource "azurerm_virtual_machine" "ca-workload-server-1" {
   }
   os_profile {
     computer_name  = "workload-server-1"
-    admin_username = "user"
+    admin_username = "kafka"
     admin_password = "Password1234!"
   }
   os_profile_linux_config {

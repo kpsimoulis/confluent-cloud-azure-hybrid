@@ -46,7 +46,7 @@ resource "azurerm_virtual_machine" "us-nat" {
   }
   os_profile {
     computer_name  = "us-nat"
-    admin_username = "user"
+    admin_username = "kafka"
     admin_password = "Password1234!"
   }
   os_profile_linux_config {
